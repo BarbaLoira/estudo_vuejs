@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-show="tituloStatus">{{titulo}}</h1>
+        <ul>
+            <li v-for="(item,index) in linguagens"> {{ index }} - {{ item.nome}}</li>
+        </ul>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                tituloStatus: true,
+                titulo: "Hello world!",
+                linguagens: [
+                    { nome: "c#" },
+                    { nome: "php" },
+                    { nome: "javascript" },
+                    { nome: "python" },
+                    { nome: "java" },
+                    { nome: "c" },
+
+                ]
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>

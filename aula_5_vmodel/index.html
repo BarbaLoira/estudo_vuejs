@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <label for="">Qual seu nome?</label>
+        <input type="text" v-model="name" />
+        <br>
+        <label> deseja receber novidades?</label>
+        <input type="radio" v-model="news" value="Sim">Sim
+        <input type="radio" v-model="news" value="Não">Não
+        <br>
+        <label>Interesses</label>
+        <br>
+        <input type="checkbox" v-model="like" value="Futebol"> Futebol
+        <br>
+        <input type="checkbox" v-model="like" value="Corrida"> Corrida
+        <br>
+        <input type="checkbox" v-model="like" value="Musica"> Musica
+        <br>
+
+        <br>
+        <br>
+
+        <label>OS do seu celular</label>
+        <select v-model="osMobile">
+            <option value="">Selecione</option>
+            <option value="Android">Android</option>
+            <option value="IOS">IOS</option>
+        </select>
+
+        <br>Nome {{ name }}
+        <br>Novidades {{ news }}
+        <br>Interesses {{ like }}
+        <br>Celular {{ osMobile }}
+
+    </div>
+
+
+
+
+
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                name: "",
+                news:"",
+                like:[],
+                osMobile:"",
+            }
+
+        });
+    </script>
+</body>
+
+</html>
