@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <label>{{ name }}</label>
+        <br>
+        <label>{{ toUpperCase }}</labelh1>
+            <br>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                name: "Jon Snow",
+            },
+
+            computed: {
+                toUpperCase() {
+                    return this.name.toUpperCase();
+                }
+            },
+
+            watch: {
+                name(newValue, oldValue) {
+                    console.log('newValue', newValue);
+                    console.log('oldValue', oldValue);
+                }
+            },
+
+            methods: {}
+
+        });
+    </script>
+</body>
+
+</html>
