@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <label>{{ name }}</label>
+        <br>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+
+            beforeCreate() {
+                console.log("beforeCreate");
+                console.log("name", this.name);
+                console.log("el", this.$el);
+            },
+
+            created() {
+                console.log("created");
+                console.log("name", this.name);
+                console.log("el", this.$el);
+            },
+
+            beforeMount() {
+                console.log("beforeMount");
+                console.log("name", this.name);
+                console.log("el", this.$el);
+            },
+
+            mounted() {
+                console.log("mounted");
+                console.log("name", this.name);
+                console.log("el", this.$el);
+            },
+
+            beforeUpdate() {
+                console.log("beforeUpdate"); // app.name ="teste" no console do browser
+               
+            },
+
+            updated() {
+                console.log("updated");
+               
+            },
+
+
+            data: {
+                name: "Jon Snow",
+            },
+
+
+
+        });
+    </script>
+</body>
+
+</html>
